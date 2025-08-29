@@ -1,0 +1,24 @@
+services:
+  roboracer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: roboracer_dev
+    network_mode: host
+    ipc: host
+    privileged: true
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+    tty: true
+    stdin_open: true
+
+    environment:
+      - DISPLAY=${DISPLAY}
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./ros2_laser_scan_matcher:/home/autodrive_devkit/ros2_laser_scan_matcher:rw
+      - ./ydlidar_ros2_driver:/home/autodrive_devkit/ydlidar_ros2_driver:rw
+
+
