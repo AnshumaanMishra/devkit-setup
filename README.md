@@ -31,7 +31,7 @@ Then continue running the topics.
 The bag file must be run using 
 ```
 
-ros2 bag play ./rosbag2_2025_08_29-01_58_52_0.db3 --remap /scan:=/autodrive/roboracer_1/lidar -l
+ros2 bag play ./sample-bag.db3 --remap /scan:=/autodrive/roboracer_1/lidar -l
 
 ```
 As the bag publishes to the `/scan` topic, which we need to redirect to the `/autodrive/roboracer_1/lidar` topic.
