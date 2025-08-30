@@ -55,3 +55,4 @@ A sample run includes(in different terminals)
 	ros2 launch ydlidar_ros2_driver ydlidar_launch_view.py
 
 ```
+## Make sure the node in `Rviz` is set to `roboracer_1` 
